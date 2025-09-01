@@ -8,8 +8,16 @@ branding:
   label: Docs
 
 links:
-- text: Home
+- text: General
   link: /
+- text: Building  
+  link: /building/
+- text: Forms
+  link: /forms/
+- text: Account
+  link: /account/
+- text: Pro
+  link: /pro/
 
 meta:
   title: " | Documentation"
@@ -36,13 +44,9 @@ git:
 poweredBy:
   enabled: false
 
-# Dark theme configuration
+# Dark theme configuration  
 theme:
   colors:
     primary: "#4c6ef5"
     secondary: "#888888"
   mode: "dark"
-  
-# Custom CSS to match Carrd style
-css:
-- /assets/custom.css
