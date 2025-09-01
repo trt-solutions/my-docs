@@ -1,20 +1,25 @@
-input: ./
+input: .
 output: .retype
 
 branding:
   title: Documentation
-  
+  logo: assets/logo.png # optional
+
 nav:
-- text: General
-  link: /
-- text: Building
-  link: /building
-- text: Forms  
-  link: /forms
-- text: Account
-  link: /account
-- text: Pro
-  link: /pro
+- text: "General"
+  link: "/"
+- text: "Building" 
+  link: "/building/"
+- text: "Forms"
+  link: "/forms/" 
+- text: "Account"
+  link: "/account/"
+- text: "Pro"
+  link: "/pro/"
+
+integrations:
+  github:
+    enabled: false
 
 page:
   toc: false
@@ -22,12 +27,17 @@ page:
 search:
   enabled: true
 
-editor:
-  enabled: false
+edit:
+  repo: ""
 
-poweredBy:
-  enabled: false
+footer:
+  copyright: ""
 
-integrations:
-  googleAnalytics:
-    id: # your GA ID if needed
+# Include custom CSS
+include:
+- assets/
+
+# Custom CSS reference
+meta:
+  - name: "theme-color"
+    content: "#1a1a1a"
