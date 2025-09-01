@@ -1,3 +1,14 @@
+# Disable table of contents
+page:
+  toc: false
+
+# Alternative syntax if the above doesn't work:
+defaults:
+  toc: false
+
+# Or disable it globally:
+site:
+  toc: false
 branding:
   title: My Docs
   logo: static/logo.png   # optional if you have a logo
@@ -20,3 +31,4 @@ links:
 
 footer:
   copyright: "&copy; Copyright {{ year }}. All rights reserved."
+  
