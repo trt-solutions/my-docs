@@ -1,34 +1,48 @@
-# Disable table of contents
-page:
-  toc: false
-
-# Alternative syntax if the above doesn't work:
-defaults:
-  toc: false
-
-# Or disable it globally:
-site:
-  toc: false
-branding:
-  title: My Docs
-  logo: static/logo.png   # optional if you have a logo
 input: .
 output: .retype
 
-url: docs.example.com # Use your website address here
-
-start:
-  # Uncomment the next line to try Retype Pro features
-  # pro: true
+url: # Add your GitHub Pages URL here when you deploy
 
 branding:
-  title: Project Name
+  title: Documentation
   label: Docs
 
 links:
-- text: Getting Started
-  link: https://retype.com/guides/getting-started/
+- text: Home
+  link: /
 
-footer:
-  copyright: "&copy; Copyright {{ year }}. All rights reserved."
+meta:
+  title: " | Documentation"
+
+page:
+  toc: false
+
+defaults:
+  layout: page
+  toc: false
+
+markdown:
+  lineBreaks: soft
+
+search:
+  enabled: true
   
+editor:
+  enabled: false
+
+git:
+  edit: false
+
+poweredBy:
+  enabled: false
+
+# Dark theme configuration
+theme:
+  colors:
+    primary: "#4c6ef5"
+    secondary: "#888888"
+  mode: "dark"
+  
+# Custom CSS to match Carrd style
+css:
+- /assets/custom.css
