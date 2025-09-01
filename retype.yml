@@ -1,52 +1,33 @@
-input: .
+input: ./
 output: .retype
-
-url: # Add your GitHub Pages URL here when you deploy
 
 branding:
   title: Documentation
-  label: Docs
-
-links:
+  
+nav:
 - text: General
   link: /
-- text: Building  
-  link: /building/
-- text: Forms
-  link: /forms/
+- text: Building
+  link: /building
+- text: Forms  
+  link: /forms
 - text: Account
-  link: /account/
+  link: /account
 - text: Pro
-  link: /pro/
-
-meta:
-  title: " | Documentation"
+  link: /pro
 
 page:
   toc: false
 
-defaults:
-  layout: page
-  toc: false
-
-markdown:
-  lineBreaks: soft
-
 search:
   enabled: true
-  
+
 editor:
   enabled: false
-
-git:
-  edit: false
 
 poweredBy:
   enabled: false
 
-# Dark theme configuration  
-theme:
-  colors:
-    primary: "#4c6ef5"
-    secondary: "#888888"
-  mode: "dark"
+integrations:
+  googleAnalytics:
+    id: # your GA ID if needed
