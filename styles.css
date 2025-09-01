@@ -1,0 +1,586 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+/* Header */
+.header {
+    background: #242424;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.logo-icon {
+    width: 16px;
+    height: 16px;
+    background: #4c6ef5;
+    border-radius: 2px;
+}
+
+.breadcrumb {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: #242424;
+    padding: 1.5rem 1.25rem;
+    border-right: 1px solid #333;
+    position: fixed;
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    top: 50px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    color: #888;
+    font-size: 0.8rem;
+    font-family: Arial, sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.nav-menu {
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-bottom: 0.2rem;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    color: #888;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+    font-size: 0.85rem;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.05);
+    color: #ffffff;
+}
+
+.nav-link.active {
+    background: rgba(255,255,255,0.1);
+    color: #ffffff;
+}
+
+/* Main content */
+.main-content {
+    margin-left: 260px;
+    padding: 2.5rem 3rem;
+    width: calc(100% - 260px);
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem 0;
+    color: #ffffff;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.5rem 0;
+    color: #ffffff;
+}
+
+p {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Timeline styles */
+.timeline-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.step-number {
+    min-width: 32px;
+    height: 32px;
+    background: #6c5ce7;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.step-check {
+    min-width: 32px;
+    height: 32px;
+    background: #00d2a0;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+    padding-top: 0.25rem;
+    color: #e0e0e0;
+}
+
+/* Buttons */
+.carrd-button {
+    background: #4a4a4a;
+    color: #e0e0e0;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-family: monospace;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Content table */
+.content-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.content-item {
+    background: rgba(255,255,255,0.02);
+    padding: 1.5rem;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.content-item:nth-child(even) {
+    border-right: none;
+}
+
+.content-item:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+
+.content-item h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    color: #ffffff;
+}
+
+.content-item p {
+    color: #888;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+/* Reference table */
+.reference-table {
+    width: 100%;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+}
+
+.reference-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    vertical-align: top;
+}
+
+.reference-table td:first-child {
+    font-family: monospace;
+    font-size: 0.75rem;
+    background: #4a4a4a;
+    color: #e0e0e0;
+    border-radius: 3px;
+    width: 200px;
+}
+
+.reference-table td:last-child {
+    color: #888;
+    font-size: 0.85rem;
+}
+/* Update the logo section */
+.logo-icon {
+    width: 16px;
+    height: 16px;
+    background: #4c6ef5;
+    border-radius: 2px;
+    position: relative;
+}
+
+.logo-icon::before {
+    content: "📄";
+    position: absolute;
+    top: -2px;
+    left: 1px;
+    font-size: 12px;
+    color: white;
+}
+
+/* Timeline connecting line */
+.timeline-container {
+    position: relative;
+    padding-left: 1rem;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 32px;
+    top: 40px;
+    bottom: -20px;
+    width: 2px;
+    background: rgba(108, 92, 231, 0.3);
+    z-index: 0;
+}
+
+/* Update timeline step positioning */
+.timeline-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Make sure the last step doesn't show the line */
+.timeline-container .timeline-step:last-child::after {
+    content: '';
+    position: absolute;
+    left: -16px;
+    bottom: -20px;
+    width: 2px;
+    height: 20px;
+    background: #1a1a1a;
+    z-index: 2;
+}
+/* Professional document icon using CSS */
+.logo-icon {
+    width: 16px;
+    height: 16px;
+    background: #4c6ef5;
+    border-radius: 2px;
+    position: relative;
+}
+
+.logo-icon::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 10px;
+    height: 12px;
+    background: white;
+    border-radius: 1px;
+}
+
+.logo-icon::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 1px;
+    background: #4c6ef5;
+    border-radius: 0.5px;
+    box-shadow: 
+        0 2px 0 #4c6ef5,
+        0 4px 0 #4c6ef5,
+        0 6px 0 #4c6ef5;
+}
+
+/* Updated timeline colors - gray instead of purple */
+.step-number {
+    min-width: 32px;
+    height: 32px;
+    background: #E8E8E8;
+    color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+/* Timeline connecting line - lighter gray */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 32px;
+    top: 40px;
+    bottom: -20px;
+    width: 2px;
+    background: rgba(232, 232, 232, 0.3);
+    z-index: 0;
+}
+
+/* Enhanced table hover animations */
+.content-item {
+    background: rgba(255,255,255,0.02);
+    padding: 1.5rem;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.content-item:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Smooth transitions for all interactive elements */
+.nav-link {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    color: #888;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+}
+
+.nav-link:hover {
+    background: rgba(255,255,255,0.08);
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+/* Button hover effects */
+.carrd-button {
+    background: #4a4a4a;
+    color: #e0e0e0;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-family: monospace;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.carrd-button:hover {
+    background: #555;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+/* Transparent document icon */
+.logo-icon {
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 2px;
+    position: relative;
+}
+
+.logo-icon::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 10px;
+    height: 12px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 1px;
+}
+
+.logo-icon::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 1px;
+    background: #333;
+    border-radius: 0.5px;
+    box-shadow: 
+        0 2px 0 #333,
+        0 4px 0 #333,
+        0 6px 0 #333;
+}
+
+/* Hamburger menu */
+.hamburger {
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    transition: all 0.2s ease;
+}
+
+.hamburger span {
+    width: 18px;
+    height: 2px;
+    background: #888;
+    border-radius: 1px;
+    transition: all 0.2s ease;
+}
+
+.hamburger:hover {
+    color: #ffffff;
+}
+
+.hamburger:hover span {
+    background: #ffffff;
+}
+
+/* Enhanced breadcrumb styling */
+.breadcrumb {
+    color: #666;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.05);
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Update header layout for better spacing */
+.header {
+    background: #242424;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Mobile responsive hamburger */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+}
+
+/* Desktop hide hamburger */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
+/* Remove breadcrumb from header */
+.header {
+    background: #242424;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Breadcrumb styling for content area */
+.content-breadcrumb {
+    color: #666;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+/* Adjust main content spacing */
+.main-content {
+    margin-left: 260px;
+    padding: 2rem 3rem;
+    width: calc(100% - 260px);
+}
+
+/* H1 spacing adjustment */
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 0;
+}
